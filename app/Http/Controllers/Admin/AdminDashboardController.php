@@ -16,4 +16,8 @@ class AdminDashboardController extends Controller
     {
         return view('admin.dashboard');
     }
+    public function wallet()
+    {
+        return view('admin.wallet');
+    }
 }
