@@ -1,17 +1,13 @@
-<x-app-layout>
-    <x-slot name="header">
-        <div class="flex justify-between items-center">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Admin Dashboard') }}
-            </h2>
+@extends('layouts.admin')
 
-            <span class="text-sm text-gray-500">
-                {{ now()->format('d M Y') }}
-            </span>
-        </div>
-    </x-slot>
-    <x-admin.sidebar />
+@section('title', 'Admin Dashboard')
 
+@section('header')
+    Admin Dashboard
+@endsection
+
+@section('content')
+    <!-- Your dashboard stats & tables here -->
     <div class="py-8">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
 
@@ -63,8 +59,7 @@
                                 <td class="px-6 py-4">Credit</td>
                                 <td class="px-6 py-4">৳ 5,000</td>
                                 <td class="px-6 py-4">
-                                    <span
-                                        class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-700 font-semibold">
+                                    <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-700 font-semibold">
                                         Success
                                     </span>
                                 </td>
@@ -89,4 +84,4 @@
 
         </div>
     </div>
-</x-app-layout>
+@endsection
